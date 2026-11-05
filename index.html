@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+<title>Dangerous Fox Watches | Configurador</title>
+<style>
+:root{--bg:#101113;--panel:#191b1f;--gold:#d6b36a;--muted:#a7a7a7;--line:#34363b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f5f3ee;font-family:Arial,Helvetica,sans-serif}
+header{padding:24px 18px 18px;text-align:center;border-bottom:1px solid var(--line);background:#0b0c0e}
+.brand{font-family:Georgia,serif;letter-spacing:3px;color:var(--gold);font-size:clamp(21px,5vw,30px);font-weight:bold}.sub{font-size:10px;letter-spacing:5px;margin-top:7px;color:#eee}
+main{max-width:1100px;margin:auto;padding:22px 15px 50px}.intro{text-align:center;margin:5px auto 24px}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:3px}.intro h1{font-family:Georgia,serif;font-weight:normal;font-size:30px;margin:9px 0}.intro p{color:var(--muted);font-size:14px;line-height:1.5;margin:0}
+.layout{display:grid;grid-template-columns:1fr;gap:16px}.preview,.controls{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.preview{padding:14px}.preview-head{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px;letter-spacing:1.5px}.preview-head strong{color:var(--gold);font-weight:normal}
+.watch-stage{min-height:330px;display:grid;place-items:center;background:radial-gradient(ellipse at center,#292a2d 0%,#191a1d 48%,#141518 75%);border-radius:12px;margin-top:12px;overflow:hidden}
+svg{width:min(100%,390px);height:auto;filter:drop-shadow(0 18px 16px #0008)}
+.controls{padding:18px}.section-title{font-family:Georgia,serif;font-size:20px;margin:0 0 5px}.hint{color:var(--muted);font-size:12px;margin:0 0 18px;line-height:1.45}.field{border-top:1px solid var(--line);padding:14px 0}.field label{display:block;font-size:13px;font-weight:bold;margin-bottom:10px}.choices{display:flex;flex-wrap:wrap;gap:8px}.choice{border:1px solid #45474c;background:#222429;color:#eee;border-radius:9px;padding:9px 12px;font-size:12px;cursor:pointer}.choice.active{border-color:var(--gold);color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}.choice:disabled{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.swatch{display:flex;align-items:center;gap:7px}.dot{width:13px;height:13px;border-radius:50%;border:1px solid #aaa;display:inline-block}
+.summary{background:#111215;border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:16px}.summary h3{font-size:12px;color:var(--gold);letter-spacing:2px;margin:0 0 10px}.summary p{font-size:12px;color:#d5d5d5;line-height:1.7;margin:0}.price{font-family:Georgia,serif;font-size:22px;color:var(--gold);margin-top:12px}.note{font-size:10px;color:var(--muted);line-height:1.45;margin-top:7px}
+.actions{display:flex;gap:9px;margin-top:14px}.btn{flex:1;padding:12px;border-radius:9px;border:1px solid var(--gold);background:var(--gold);color:#171717;font-weight:bold;font-size:12px;cursor:pointer}.btn.secondary{background:transparent;color:var(--gold)}
+footer{text-align:center;color:#777;font-size:10px;letter-spacing:1px;padding:25px 12px;border-top:1px solid var(--line)}
+@media(min-width:800px){main{padding-top:35px}.layout{grid-template-columns:1.1fr .9fr;align-items:start}.preview{position:sticky;top:15px;padding:20px}.watch-stage{min-height:520px}.controls{padding:22px}.intro h1{font-size:38px}}
+</style>
+</head>
+<body>
+<header><div class="brand">DANGEROUS FOX</div><div class="sub">WATCHES</div></header>
+<main>
+  <section class="intro"><div class="eyebrow">DF CUSTOMIZER · 01</div><h1>Diseña tu reloj</h1><p>Combina componentes y crea una configuración con personalidad propia.</p></section>
+  <div class="layout">
+    <section class="preview">
+      <div class="preview-head"><span>VISTA PREVIA</span><strong>DF CUSTOM</strong></div>
+      <div class="watch-stage">
+        <svg viewBox="0 0 360 440" role="img" aria-label="Vista previa ilustrada de un reloj personalizado">
+          <defs>
+            <linearGradient id="steel" x1="0" x2="1"><stop stop-color="#62676c"/><stop offset=".24" stop-color="#e1e2df"/><stop offset=".5" stop-color="#777d82"/><stop offset=".78" stop-color="#d4d5d2"/><stop offset="1" stop-color="#555a5e"/></linearGradient>
+            <linearGradient id="gold" x1="0" x2="1"><stop stop-color="#725326"/><stop offset=".28" stop-color="#e6c77e"/><stop offset=".55" stop-color="#a77a35"/><stop offset=".8" stop-color="#f0d99b"/><stop offset="1" stop-color="#78582c"/></linearGradient>
+            <linearGradient id="strapMetal" x1="0" x2="1"><stop stop-color="#555b60"/><stop offset=".5" stop-color="#c9ccce"/><stop offset="1" stop-color="#555b60"/></linearGradient>
+            <radialGradient id="face" cx="35%" cy="28%"><stop id="dialLight" stop-color="#4a4a4a"/><stop id="dialDark" offset="1" stop-color="#151515"/></radialGradient>
+          </defs>
+          <g id="strapLeather">
+            <path d="M128 35 Q180 19 232 35 L215 135 L145 135Z" fill="#252525" stroke="#555" stroke-width="2"/>
+            <path d="M128 405 Q180 421 232 405 L215 305 L145 305Z" fill="#252525" stroke="#555" stroke-width="2"/>
+            <path d="M143 50L217 50 M141 68L219 68 M139 86L221 86 M137 104L223 104 M143 389L217 389 M141 371L219 371 M139 353L221 353 M137 335L223 335" stroke="#777" opacity=".5"/>
+          </g>
+          <g id="strapBracelet" style="display:none">
+            <path d="M116 27L244 27L225 138L135 138Z M116 413L244 413L225 302L135 302Z" fill="url(#strapMetal)" stroke="#333" stroke-width="3"/>
+            <g stroke="#444" stroke-width="2"><path d="M130 42H230 M134 62H226 M137 82H223 M140 102H220 M130 398H230 M134 378H226 M137 358H223 M140 338H220"/></g>
+          </g>
+          <g id="caseGroup">
+            <rect x="83" y="150" width="194" height="140" rx="39" fill="url(#steel)" stroke="#555" stroke-width="3"/>
+            <rect x="268" y="204" width="23" height="32" rx="7" fill="url(#steel)" stroke="#555" stroke-width="2"/>
+            <path d="M278 209V231" stroke="#555" stroke-width="2"/>
+          </g>
+          <circle cx="180" cy="220" r="103" id="bezelOuter" fill="#236044" stroke="#c5c7c8" stroke-width="7"/>
+          <circle cx="180" cy="220" r="91" id="bezelInner" fill="#236044" stroke="#292929" stroke-width="2"/>
+          <circle cx="180" cy="220" r="80" fill="url(#face)" stroke="#aeb2b4" stroke-width="2"/>
+          <g id="markers" stroke="#e8e3d8" stroke-width="3" stroke-linecap="round">
+            <path d="M180 148V159 M180 281V292 M108 220H119 M241 220H252 M129 169L137 177 M223 263L231 271 M231 169L223 177 M137 263L129 271"/>
+            <path d="M145 156L149 165 M215 275L211 284 M115 185L124 189 M245 251L236 247 M245 189L236 193 M115 251L124 247 M215 165L211 156 M145 284L149 275" stroke-width="1.5"/>
+          </g>
+          <text x="180" y="184" fill="#d6b36a" font-size="10" text-anchor="middle" letter-spacing="1.4">DANGEROUS FOX</text>
+          <text x="180" y="263" fill="#ddd" font-size="8" text-anchor="middle" letter-spacing="2">AUTOMATIC</text>
+          <g id="hands" stroke="#e5e5e5" stroke-linecap="round">
+            <path d="M180 220L180 168" stroke-width="5"/><path d="M180 220L218 236" stroke-width="3"/><path d="M180 220L148 191" stroke="#d6b36a" stroke-width="1.5"/>
+          </g>
+          <circle cx="180" cy="220" r="6" fill="#d6b36a" stroke="#222" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="note">Imagen ilustrativa de configuración. Las fotografías y componentes reales se incorporarán en la siguiente fase.</div>
+    </section>
+    <section class="controls">
+      <h2 class="section-title">Tu configuración</h2><p class="hint">Selecciona las opciones. La vista previa cambiará automáticamente.</p>
+      <div class="field"><label>1. Movimiento</label><div class="choices" data-group="movement">
+        <button class="choice active" data-value="NH35">NH35</button><button class="choice" data-value="NH36">NH36</button><button class="choice" data-value="Miyota 8215">Miyota 8215</button><button class="choice" data-value="Miyota 821A">Miyota 821A</button><button class="choice" data-value="VK63">VK63</button>
+      </div></div>
+      <div class="field"><label>2. Esfera</label><div class="choices" data-group="dial">
+        <button class="choice active" data-value="Negra">Negra</button><button class="choice" data-value="Azul">Azul</button><button class="choice" data-value="Verde">Verde</button><button class="choice" data-value="Blanca">Blanca</button><button class="choice" data-value="Morada">Morada</button>
+      </div></div>
+      <div class="field"><label>3. Bisel</label><div class="choices" data-group="bezel">
+        <button class="choice" data-value="Negro">Negro</button><button class="choice active" data-value="Verde">Verde</button><button class="choice" data-value="Azul">Azul</button><button class="choice" data-value="Rojo">Rojo</button>
+      </div></div>
+      <div class="field"><label>4. Caja</label><div class="choices" data-group="case">
+        <button class="choice active" data-value="Acero">Acero</button><button class="choice" data-value="Negra">Negra</button><button class="choice" data-value="Dorada">Dorada</button><button class="choice" data-value="Oro rosa">Oro rosa</button>
+      </div></div>
+      <div class="field"><label>5. Correa</label><div class="choices" data-group="strap">
+        <button class="choice active" data-value="Acero">Acero</button><button class="choice" data-value="Negra">Negra</button><button class="choice" data-value="Marrón">Marrón</button><button class="choice" data-value="Verde">Verde</button>
+      </div></div>
+      <div class="field"><label>6. Manecillas</label><div class="choices" data-group="hands">
+        <button class="choice active" data-value="Plateadas">Plateadas</button><button class="choice" data-value="Doradas">Doradas</button><button class="choice" data-value="Negras">Negras</button>
+      </div></div>
+      <div class="summary"><h3>RESUMEN DEL DISEÑO</h3><p id="summary">Movimiento: NH35<br>Esfera: Negra<br>Bisel: Verde<br>Caja: Acero<br>Correa: Acero<br>Manecillas: Plateadas</p><div class="price">Precio: por definir</div><div class="note">Los precios se añadirán cuando introduzcamos los costes reales de tus componentes. La compatibilidad entre piezas también se configurará con tus referencias exactas.</div></div>
+      <div class="actions"><button class="btn" id="share">Compartir diseño</button><button class="btn secondary" id="reset">Reiniciar</button></div>
+    </section>
+  </div>
+</main>
+<footer>DANGEROUS FOX WATCHES · DISEÑADO CON PASIÓN POR LA RELOJERÍA</footer>
+<script>
+const state={movement:"NH35",dial:"Negra",bezel:"Verde",case:"Acero",strap:"Acero",hands:"Plateadas"};
+const dialColors={Negra:["#505050","#111111"],Azul:["#3974a9","#092744"],Verde:["#4d8964","#102d20"],Blanca:["#fffdf2","#b9b8ad"],Morada:["#8c65a8","#281b3c"]};
+const bezelColors={Negro:"#202124",Verde:"#236044",Azul:"#205b9a",Rojo:"#982e30"};
+const caseColors={Acero:"url(#steel)",Negra:"#292b2e",Dorada:"url(#gold)","Oro rosa":"#b77d70"};
+const handColors={Plateadas:"#e5e5e5",Doradas:"#d6b36a",Negras:"#151515"};
+function update(){
+ document.querySelectorAll(".choices").forEach(group=>{const key=group.dataset.group;group.querySelectorAll("button").forEach(b=>b.classList.toggle("active",b.dataset.value===state[key]));});
+ document.getElementById("dialLight").setAttribute("stop-color",dialColors[state.dial][0]);document.getElementById("dialDark").setAttribute("stop-color",dialColors[state.dial][1]);
+ document.getElementById("bezelOuter").setAttribute("fill",bezelColors[state.bezel]);document.getElementById("bezelInner").setAttribute("fill",bezelColors[state.bezel]);
+ document.querySelectorAll("#caseGroup rect").forEach(r=>r.setAttribute("fill",caseColors[state.case]));
+ document.getElementById("strapLeather").style.display=state.strap==="Acero"?"none":"";
+ document.getElementById("strapBracelet").style.display=state.strap==="Acero"?"":"none";
+ const strapMap={Negra:"#292929",Marrón:"#70452d",Verde:"#354b37"};document.querySelectorAll("#strapLeather path").forEach(p=>{if(p.getAttribute("stroke"))return;p.setAttribute("fill",strapMap[state.strap]||"#292929")});
+ document.querySelectorAll("#hands path").forEach(p=>p.setAttribute("stroke",handColors[state.hands]));
+ document.getElementById("summary").innerHTML=`Movimiento: ${state.movement}<br>Esfera: ${state.dial}<br>Bisel: ${state.bezel}<br>Caja: ${state.case}<br>Correa: ${state.strap}<br>Manecillas: ${state.hands}`;
+}
+document.querySelectorAll(".choices button").forEach(b=>b.addEventListener("click",()=>{state[b.closest(".choices").dataset.group]=b.dataset.value;update()}));
+document.getElementById("reset").addEventListener("click",()=>{Object.assign(state,{movement:"NH35",dial:"Negra",bezel:"Verde",case:"Acero",strap:"Acero",hands:"Plateadas"});update()});
+document.getElementById("share").addEventListener("click",async()=>{const text=`Mi diseño Dangerous Fox Watches\n${Object.entries(state).map(([k,v])=>`${k}: ${v}`).join("\n")}`;if(navigator.share){try{await navigator.share({title:"Mi reloj DF",text})}catch(e){}}else if(navigator.clipboard){await navigator.clipboard.writeText(text);alert("Configuración copiada. Ya puedes compartirla.")}else{prompt("Copia tu configuración:",text)}});
+update();
+</script>
+</body>
+</html>
